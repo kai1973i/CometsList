@@ -14,10 +14,14 @@ Es nutzt die COBS-API, speichert Kometen- und Orbitdaten als CSV und findet Kome
 
 - `fetch_comets.py`: Laedt Kometenliste und (optional) Orbitdaten von der API.
 - `find_similar_orbits.py`: Analysiert Orbitdaten und sucht gleiche/aehnliche Bahnen.
+- `validate_orbits.py`: Prueft Orbitdaten auf Plausibilitaet und Konsistenz.
+- `run_pipeline.py`: Fuehrt Abruf, Analyse und Plausibilitaetspruefung automatisiert aus.
 - `data/comets.csv`: Gespeicherte Kometen-Stammdaten.
 - `data/comets_orbits.csv`: Gespeicherte Orbitdaten.
 - `data/similar_orbits.csv`: Ergebnisdatei fuer aehnliche Orbit-Paare.
 - `data/exact_orbit_groups.csv`: Ergebnisdatei fuer exakt gleiche Orbit-Gruppen.
+- `data/orbit_plausibility_issues.csv`: Gefundene Plausibilitaets-Issues.
+- `data/orbit_plausibility_summary.csv`: Kompakte Kennzahlen der Plausibilitaetspruefung.
 
 ## Voraussetzungen
 
@@ -61,7 +65,7 @@ python3 find_similar_orbits.py --top 20
 
 ## Workflow automatisieren
 
-Mit dem Pipeline-Skript kannst du den gesamten Ablauf (Abruf + Analyse) in einem Schritt ausfuehren:
+Mit dem Pipeline-Skript kannst du den gesamten Ablauf (Abruf + Analyse + Plausibilitaetspruefung) in einem Schritt ausfuehren:
 
 ```bash
 python3 run_pipeline.py --mode strict --top 20
@@ -75,6 +79,33 @@ python3 run_pipeline.py --skip-fetch --mode very-strict --top 20
 
 # Mit manuellen Grenzwerten
 python3 run_pipeline.py --mode normal --score-threshold 0.7 --i-tol 2.0 --top 20
+
+# Validierung streng behandeln (CI faellt bei ERROR-Issues)
+python3 run_pipeline.py --mode strict --fail-on-validation-errors
+```
+
+## Plausibilitaetspruefung
+
+Das Skript `validate_orbits.py` prueft, ob Orbitdaten intern konsistent und physikalisch plausibel sind.
+
+Geprueft werden unter anderem:
+
+- Wertebereiche (`e`, `i`, `om`, `w`, `ma`, `q`, `per`)
+- Konsistenz von `q = a * (1 - e)`
+- Konsistenz von `ad = a * (1 + e)`
+- Typische Bahn-Klassifikation (`e < 1` mit `a > 0`, `e > 1` mit `a < 0`)
+- Fehlende Kernfelder in Datensaetzen
+
+Direkter Aufruf:
+
+```bash
+python3 validate_orbits.py --show 25
+```
+
+Optional streng (Exit-Code 1 bei gefundenen ERROR-Issues):
+
+```bash
+python3 validate_orbits.py --fail-on-errors
 ```
 
 ## GitHub Action (manuell)
@@ -94,6 +125,8 @@ Der Workflow fuehrt `run_pipeline.py` aus und committed geaenderte Dateien autom
 - `data/comets_orbits.csv`
 - `data/similar_orbits.csv`
 - `data/exact_orbit_groups.csv`
+- `data/orbit_plausibility_issues.csv`
+- `data/orbit_plausibility_summary.csv`
 
 ### Modi
 
@@ -147,6 +180,26 @@ Enthaelt Gruppen mit identischen (gerundeten) Orbitwerten:
 - `group_id`, `group_size`
 - `comet_id`, `name`
 - Orbitspalten `e`, `q`, `i`, `om`, `w`, `a`
+
+### `orbit_plausibility_issues.csv`
+
+Enthaelt pro Datensatz erkannte Auffaelligkeiten:
+
+- `comet_id`
+- `severity` (`ERROR` oder `WARN`)
+- `rule`
+- `message`
+- `details`
+
+### `orbit_plausibility_summary.csv`
+
+Enthaelt kompakte Kennzahlen:
+
+- `checked_rows`
+- `issue_count`
+- `error_count`
+- `warn_count`
+- `affected_comets`
 
 ## Score-Interpretation
 

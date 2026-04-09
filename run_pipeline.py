@@ -52,6 +52,22 @@ def parse_args() -> argparse.Namespace:
         default=20,
         help="Anzahl Treffer, die die Analyse in der Konsole ausgibt.",
     )
+    parser.add_argument(
+        "--no-validation",
+        action="store_true",
+        help="Ueberspringt die Plausibilitaetspruefung der Orbitdaten.",
+    )
+    parser.add_argument(
+        "--validation-show",
+        type=int,
+        default=20,
+        help="Anzahl Plausibilitaets-Issues, die in der Konsole angezeigt werden.",
+    )
+    parser.add_argument(
+        "--fail-on-validation-errors",
+        action="store_true",
+        help="Pipeline mit Exit-Code 1 beenden, wenn Plausibilitaets-ERRORs gefunden werden.",
+    )
 
     parser.add_argument("--score-threshold", type=float, default=None)
     parser.add_argument("--e-tol", type=float, default=None)
@@ -85,6 +101,18 @@ def parse_args() -> argparse.Namespace:
         default=Path("data/exact_orbit_groups.csv"),
         help="Zieldatei fuer exakte Orbit-Gruppen.",
     )
+    parser.add_argument(
+        "--issues-output",
+        type=Path,
+        default=Path("data/orbit_plausibility_issues.csv"),
+        help="Zieldatei fuer Plausibilitaets-Issues.",
+    )
+    parser.add_argument(
+        "--summary-output",
+        type=Path,
+        default=Path("data/orbit_plausibility_summary.csv"),
+        help="Zieldatei fuer Plausibilitaets-Summary.",
+    )
     return parser.parse_args()
 
 
@@ -94,9 +122,13 @@ def main() -> None:
     root = Path(__file__).resolve().parent
     fetch_script = root / "fetch_comets.py"
     find_script = root / "find_similar_orbits.py"
+    validate_script = root / "validate_orbits.py"
 
-    if not fetch_script.exists() or not find_script.exists():
-        raise SystemExit("Benoetigte Skripte nicht gefunden (fetch_comets.py/find_similar_orbits.py).")
+    if not fetch_script.exists() or not find_script.exists() or not validate_script.exists():
+        raise SystemExit(
+            "Benoetigte Skripte nicht gefunden "
+            "(fetch_comets.py/find_similar_orbits.py/validate_orbits.py)."
+        )
 
     if not args.skip_fetch:
         fetch_command = [
@@ -109,7 +141,7 @@ def main() -> None:
             "--workers",
             str(args.workers),
         ]
-        run_step(fetch_command, "Schritt 1/2: Kometen- und Orbitdaten abrufen")
+        run_step(fetch_command, "Schritt 1/3: Kometen- und Orbitdaten abrufen")
     else:
         if not args.orbits_output.exists():
             raise SystemExit(
@@ -147,11 +179,32 @@ def main() -> None:
     add_optional_float_arg(find_command, "--w-tol", args.w_tol)
     add_optional_float_arg(find_command, "--a-rel-tol", args.a_rel_tol)
 
-    run_step(find_command, "Schritt 2/2: Orbit-Aehnlichkeiten berechnen")
+    run_step(find_command, "Schritt 2/3: Orbit-Aehnlichkeiten berechnen")
+
+    if not args.no_validation:
+        validate_command = [
+            args.python,
+            str(validate_script),
+            "--orbits",
+            str(args.orbits_output),
+            "--issues-output",
+            str(args.issues_output),
+            "--summary-output",
+            str(args.summary_output),
+            "--show",
+            str(args.validation_show),
+        ]
+        if args.fail_on_validation_errors:
+            validate_command.append("--fail-on-errors")
+
+        run_step(validate_command, "Schritt 3/3: Plausibilitaetspruefung der Orbitdaten")
 
     print("\nPipeline abgeschlossen.")
     print(f"Aehnliche Paare: {args.similar_output}")
     print(f"Exakte Gruppen: {args.exact_output}")
+    if not args.no_validation:
+        print(f"Plausibilitaets-Issues: {args.issues_output}")
+        print(f"Plausibilitaets-Summary: {args.summary_output}")
 
 
 if __name__ == "__main__":

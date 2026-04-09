@@ -1,0 +1,513 @@
+comet_id,severity,rule,message,details
+19,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.08;expected_q=0.7670000000000007;diff=0.3129999999999994;allowed=0.03
+21,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.48;expected_q=1.5440000000000014;diff=0.06400000000000139;allowed=0.03088000000000003
+27,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.03;expected_q=2.076000000000002;diff=0.04600000000000204;allowed=0.041520000000000036
+32,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.799;expected_q=1.3100000000000012;diff=0.5110000000000011;allowed=0.03
+36,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.18;expected_q=1.096000000000001;diff=0.08399999999999896;allowed=0.03
+39,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.167;expected_q=0.2330000000000002;diff=0.0660000000000002;allowed=0.03
+42,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.736;expected_q=0.6900000000000006;diff=0.045999999999999375;allowed=0.03
+45,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.476;expected_q=0.5240000000000005;diff=0.04800000000000049;allowed=0.03
+46,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+47,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.429;expected_q=0.6380000000000006;diff=0.20900000000000057;allowed=0.03
+51,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.02;expected_q=3.2100000000000026;diff=1.1900000000000026;allowed=0.06420000000000005
+162,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.14;expected_q=4.640000000000004;diff=0.49999999999999556;allowed=0.1028
+165,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.93;expected_q=5.560000000000005;diff=0.6300000000000052;allowed=0.1112000000000001
+173,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.56;expected_q=5.100000000000005;diff=0.45999999999999464;allowed=0.1112
+176,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.85;expected_q=7.870000000000007;diff=2.0200000000000076;allowed=0.15740000000000015
+180,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.17;expected_q=2.6600000000000024;diff=0.5099999999999976;allowed=0.0634
+181,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.74;expected_q=2.5200000000000022;diff=0.21999999999999797;allowed=0.05480000000000001
+183,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.47;expected_q=2.330000000000002;diff=0.13999999999999835;allowed=0.049400000000000006
+185,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.98;expected_q=3.204000000000003;diff=0.22400000000000286;allowed=0.06408000000000005
+186,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=8.74;expected_q=9.380000000000008;diff=0.6400000000000077;allowed=0.18760000000000016
+190,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.54;expected_q=3.8160000000000034;diff=0.27600000000000335;allowed=0.07632000000000007
+191,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.2;expected_q=1.100000000000001;diff=0.09999999999999898;allowed=0.03
+200,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.52;expected_q=4.950000000000005;diff=0.569999999999995;allowed=0.1104
+202,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.01;expected_q=3.8780000000000037;diff=0.13199999999999612;allowed=0.0802
+209,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.77;expected_q=1.4300000000000013;diff=0.33999999999999875;allowed=0.0354
+217,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.28;expected_q=1.4010000000000011;diff=0.1210000000000011;allowed=0.03
+218,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.13;expected_q=1.3080000000000012;diff=0.17800000000000127;allowed=0.03
+219,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.27;expected_q=2.8650000000000024;diff=0.4049999999999976;allowed=0.0654
+221,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.42;expected_q=1.8800000000000017;diff=0.46000000000000174;allowed=0.037600000000000036
+222,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.691;expected_q=0.7230000000000006;diff=0.032000000000000695;allowed=0.03
+233,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.26;expected_q=6.420000000000005;diff=0.16000000000000547;allowed=0.1284000000000001
+239,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.91;expected_q=6.230000000000006;diff=2.3200000000000056;allowed=0.12460000000000011
+240,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.95;expected_q=6.000000000000005;diff=0.9499999999999948;allowed=0.139
+242,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.55;expected_q=2.4710000000000023;diff=0.07899999999999752;allowed=0.051
+249,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.95;expected_q=2.7700000000000022;diff=0.17999999999999794;allowed=0.059000000000000004
+254,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.24;expected_q=6.280000000000006;diff=2.0400000000000054;allowed=0.1256000000000001
+264,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.84;expected_q=2.9120000000000026;diff=0.07200000000000273;allowed=0.058240000000000056
+265,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.2;expected_q=1.3680000000000012;diff=0.16800000000000126;allowed=0.03
+268,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.75;expected_q=3.0400000000000027;diff=0.2900000000000027;allowed=0.060800000000000055
+275,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.78;expected_q=1.7280000000000015;diff=0.05199999999999849;allowed=0.0356
+282,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.38;expected_q=2.690000000000002;diff=0.6899999999999977;allowed=0.0676
+310,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+318,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+338,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.74;expected_q=1.7820000000000016;diff=0.04200000000000159;allowed=0.03564000000000003
+339,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.25;expected_q=1.7900000000000016;diff=0.5400000000000016;allowed=0.03580000000000003
+344,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.63;expected_q=1.5600000000000014;diff=0.06999999999999851;allowed=0.0326
+355,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.753;expected_q=1.070000000000001;diff=0.31700000000000095;allowed=0.03
+356,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.756;expected_q=0.6900000000000006;diff=0.06599999999999939;allowed=0.03
+359,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.13;expected_q=0.7730000000000007;diff=0.3569999999999992;allowed=0.03
+362,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.83;expected_q=2.496000000000002;diff=0.33399999999999785;allowed=0.056600000000000004
+368,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+378,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.489;expected_q=0.5780000000000005;diff=0.08900000000000052;allowed=0.03
+381,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.46;expected_q=2.8700000000000028;diff=0.5899999999999972;allowed=0.0692
+400,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.08;expected_q=2.140000000000002;diff=0.06000000000000183;allowed=0.04280000000000004
+402,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+416,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+417,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.908;expected_q=1.098000000000001;diff=0.19000000000000095;allowed=0.03
+419,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.53;expected_q=1.4050000000000011;diff=0.12499999999999889;allowed=0.030600000000000002
+431,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.87;expected_q=1.7200000000000015;diff=0.14999999999999858;allowed=0.0374
+432,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.427;expected_q=0.37600000000000033;diff=0.05099999999999966;allowed=0.03
+433,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.07;expected_q=1.6700000000000015;diff=0.6000000000000014;allowed=0.033400000000000034
+439,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.821;expected_q=0.6980000000000006;diff=0.12299999999999933;allowed=0.03
+440,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.91;expected_q=1.8480000000000016;diff=0.06199999999999828;allowed=0.0382
+445,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.34;expected_q=1.7080000000000015;diff=0.36800000000000144;allowed=0.03416000000000003
+446,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.48;expected_q=1.3080000000000012;diff=0.17199999999999882;allowed=0.03
+450,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.6;expected_q=2.140000000000002;diff=0.4599999999999982;allowed=0.052000000000000005
+451,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.71;expected_q=1.5640000000000014;diff=0.14599999999999858;allowed=0.0342
+455,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.44;expected_q=1.5160000000000013;diff=0.0760000000000014;allowed=0.030320000000000027
+459,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.93;expected_q=7.460000000000006;diff=2.5300000000000065;allowed=0.14920000000000014
+464,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.989;expected_q=1.5000000000000013;diff=0.5110000000000013;allowed=0.030000000000000027
+465,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.29;expected_q=2.238000000000002;diff=0.051999999999997826;allowed=0.0458
+466,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.23;expected_q=4.920000000000004;diff=0.6900000000000039;allowed=0.09840000000000008
+470,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.48;expected_q=2.706000000000002;diff=0.2260000000000022;allowed=0.05412000000000004
+474,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.22;expected_q=1.7200000000000015;diff=0.49999999999999867;allowed=0.0444
+475,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.47;expected_q=1.9400000000000017;diff=0.47000000000000175;allowed=0.038800000000000036
+477,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+478,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.1;expected_q=1.180000000000001;diff=0.08000000000000096;allowed=0.03
+566,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+581,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.28;expected_q=1.050000000000001;diff=0.2299999999999991;allowed=0.03
+583,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.879;expected_q=0.8220000000000007;diff=0.056999999999999273;allowed=0.03
+584,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.818;expected_q=0.7140000000000006;diff=0.10399999999999932;allowed=0.03
+589,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.624;expected_q=0.9470000000000008;diff=0.32300000000000084;allowed=0.03
+596,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.33;expected_q=1.3600000000000012;diff=0.030000000000001137;allowed=0.03
+597,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.92;expected_q=1.7160000000000015;diff=0.2039999999999984;allowed=0.0384
+600,WARN,eccentricity_extreme,Exzentrizitaet e ist sehr hoch.,e=10.0
+604,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+605,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+606,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.573;expected_q=0.6120000000000005;diff=0.03900000000000059;allowed=0.03
+607,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.35;expected_q=3.460000000000003;diff=0.11000000000000298;allowed=0.06920000000000007
+609,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.89;expected_q=1.9860000000000018;diff=0.09600000000000186;allowed=0.03972000000000003
+610,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.68;expected_q=3.150000000000003;diff=0.47000000000000286;allowed=0.06300000000000006
+611,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.25;expected_q=5.560000000000005;diff=2.310000000000005;allowed=0.1112000000000001
+614,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.68;expected_q=2.7360000000000024;diff=0.05600000000000227;allowed=0.054720000000000046
+623,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+626,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.18;expected_q=1.4800000000000013;diff=0.3000000000000014;allowed=0.03
+634,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.8;expected_q=1.5500000000000014;diff=0.24999999999999867;allowed=0.036000000000000004
+635,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.78;expected_q=1.9000000000000017;diff=0.12000000000000166;allowed=0.038000000000000034
+642,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.43;expected_q=3.5070000000000032;diff=0.07700000000000307;allowed=0.07014000000000006
+643,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.76;expected_q=2.5800000000000023;diff=0.8200000000000023;allowed=0.05160000000000005
+645,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+653,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.93;expected_q=1.3900000000000012;diff=0.5399999999999987;allowed=0.0386
+655,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+661,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.59;expected_q=1.8300000000000016;diff=0.7599999999999982;allowed=0.0518
+663,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.91;expected_q=4.330000000000004;diff=0.4200000000000035;allowed=0.08660000000000008
+668,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.81;expected_q=7.060000000000006;diff=0.2500000000000062;allowed=0.14120000000000013
+670,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.37;expected_q=1.160000000000001;diff=0.20999999999999908;allowed=0.03
+703,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+704,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.12;expected_q=2.1700000000000017;diff=0.0500000000000016;allowed=0.043400000000000036
+707,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=7.62;expected_q=9.990000000000009;diff=2.370000000000009;allowed=0.1998000000000002
+717,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.85;expected_q=4.1700000000000035;diff=0.6799999999999962;allowed=0.09699999999999999
+733,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.745;expected_q=0.8600000000000008;diff=0.11500000000000077;allowed=0.03
+750,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.33;expected_q=3.0200000000000027;diff=0.3099999999999974;allowed=0.0666
+757,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.26;expected_q=2.116000000000002;diff=0.1439999999999979;allowed=0.0452
+758,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.5;expected_q=1.3590000000000013;diff=0.14099999999999868;allowed=0.03
+786,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.25;expected_q=4.740000000000004;diff=0.5099999999999962;allowed=0.105
+788,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+795,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.09;expected_q=1.8900000000000017;diff=0.19999999999999818;allowed=0.0418
+796,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.45;expected_q=1.3440000000000012;diff=0.10599999999999876;allowed=0.03
+800,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+808,WARN,perihelion_argument_out_of_range,"Perihelargument w liegt ausserhalb [0,360).",w=360.0
+818,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.7;expected_q=3.8400000000000034;diff=0.14000000000000323;allowed=0.07680000000000008
+834,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=7.77;expected_q=6.580000000000005;diff=1.1899999999999942;allowed=0.15539999999999998
+835,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.44;expected_q=1.3740000000000012;diff=0.06599999999999873;allowed=0.03
+839,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.19;expected_q=6.536000000000006;diff=0.3460000000000054;allowed=0.13072000000000011
+841,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.26;expected_q=1.9890000000000017;diff=0.27099999999999813;allowed=0.0452
+847,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.05;expected_q=2.124000000000002;diff=0.07400000000000206;allowed=0.04248000000000004
+848,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.68;expected_q=4.890000000000004;diff=0.2100000000000044;allowed=0.09780000000000008
+849,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.18;expected_q=6.290000000000005;diff=1.1100000000000056;allowed=0.1258000000000001
+850,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.32;expected_q=7.510000000000007;diff=2.1900000000000066;allowed=0.15020000000000014
+851,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.6;expected_q=3.236000000000003;diff=0.3639999999999972;allowed=0.07200000000000001
+860,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+881,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.18;expected_q=2.9360000000000026;diff=0.24399999999999755;allowed=0.0636
+882,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.81;expected_q=3.200000000000003;diff=0.3900000000000028;allowed=0.06400000000000006
+888,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.801;expected_q=0.8480000000000008;diff=0.04700000000000071;allowed=0.03
+895,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.84;expected_q=3.220000000000003;diff=0.380000000000003;allowed=0.06440000000000005
+904,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.11;expected_q=5.3460000000000045;diff=0.2360000000000042;allowed=0.1069200000000001
+910,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.623;expected_q=0.7520000000000007;diff=0.12900000000000067;allowed=0.03
+922,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.87;expected_q=1.3100000000000012;diff=0.5599999999999989;allowed=0.0374
+937,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.84;expected_q=1.8020000000000016;diff=0.03799999999999848;allowed=0.0368
+942,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.68;expected_q=0.5590000000000005;diff=0.12099999999999955;allowed=0.03
+946,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.55;expected_q=1.9000000000000017;diff=0.35000000000000164;allowed=0.038000000000000034
+947,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.49;expected_q=2.450000000000002;diff=1.0399999999999983;allowed=0.0698
+984,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+986,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+1002,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.34;expected_q=2.910000000000003;diff=0.42999999999999705;allowed=0.0668
+1003,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.23;expected_q=4.060000000000004;diff=0.16999999999999638;allowed=0.08460000000000001
+1022,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.13;expected_q=2.070000000000002;diff=0.05999999999999783;allowed=0.0426
+1024,WARN,perihelion_argument_out_of_range,"Perihelargument w liegt ausserhalb [0,360).",w=360.0
+1043,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.94;expected_q=6.650000000000006;diff=0.2899999999999947;allowed=0.1388
+1047,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.91;expected_q=7.060000000000006;diff=3.1500000000000057;allowed=0.14120000000000013
+1053,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.26;expected_q=3.5900000000000034;diff=0.3300000000000036;allowed=0.07180000000000007
+1055,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.2;expected_q=4.120000000000004;diff=0.9200000000000035;allowed=0.08240000000000007
+1056,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.12;expected_q=3.9800000000000035;diff=1.8600000000000034;allowed=0.07960000000000007
+1057,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.27;expected_q=5.440000000000005;diff=0.17000000000000526;allowed=0.1088000000000001
+1059,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.71;expected_q=1.6050000000000013;diff=0.10499999999999865;allowed=0.0342
+1064,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.55;expected_q=1.3500000000000012;diff=0.19999999999999885;allowed=0.031000000000000003
+1074,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.29;expected_q=1.197000000000001;diff=0.09299999999999908;allowed=0.03
+1077,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.33;expected_q=1.2720000000000011;diff=0.05799999999999894;allowed=0.03
+1085,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.24;expected_q=2.169000000000002;diff=0.0709999999999984;allowed=0.044800000000000006
+1086,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.8;expected_q=1.4500000000000013;diff=0.34999999999999876;allowed=0.036000000000000004
+1094,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.57;expected_q=2.6720000000000024;diff=0.10200000000000253;allowed=0.05344000000000005
+1101,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.65;expected_q=2.8500000000000023;diff=0.2000000000000024;allowed=0.05700000000000005
+1106,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.07;expected_q=3.5500000000000034;diff=0.48000000000000353;allowed=0.07100000000000006
+1115,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.04;expected_q=2.7480000000000024;diff=0.2919999999999976;allowed=0.0608
+1117,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.29;expected_q=4.1300000000000034;diff=1.1599999999999966;allowed=0.1058
+1122,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.4;expected_q=6.260000000000005;diff=2.860000000000005;allowed=0.12520000000000012
+1125,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.72;expected_q=0.7600000000000007;diff=0.0400000000000007;allowed=0.03
+1127,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=8.14;expected_q=13.800000000000011;diff=5.660000000000011;allowed=0.27600000000000025
+1134,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.819;expected_q=0.7400000000000007;diff=0.07899999999999929;allowed=0.03
+1146,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.59;expected_q=2.6600000000000024;diff=0.0700000000000025;allowed=0.053200000000000046
+1147,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.47;expected_q=1.345000000000001;diff=0.12499999999999889;allowed=0.03
+1159,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.293;expected_q=0.5790000000000005;diff=0.28600000000000053;allowed=0.03
+1161,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.893;expected_q=1.3300000000000012;diff=0.43700000000000117;allowed=0.03
+1163,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.32;expected_q=1.3549000000000013;diff=0.03490000000000126;allowed=0.03
+1164,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.2;expected_q=1.7300000000000015;diff=0.5300000000000016;allowed=0.034600000000000034
+1166,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.86;expected_q=0.8040000000000007;diff=0.05599999999999927;allowed=0.03
+1170,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.842;expected_q=0.8820000000000008;diff=0.04000000000000081;allowed=0.03
+1174,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.33;expected_q=1.365000000000001;diff=0.03500000000000103;allowed=0.03
+1177,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.71;expected_q=4.5000000000000036;diff=0.2099999999999964;allowed=0.0942
+1179,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1185,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.86;expected_q=7.640000000000007;diff=1.7800000000000065;allowed=0.15280000000000013
+1195,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.35;expected_q=1.313600000000001;diff=0.0363999999999991;allowed=0.03
+1200,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.93;expected_q=2.020000000000002;diff=0.09000000000000186;allowed=0.04040000000000004
+1201,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.93;expected_q=1.8840000000000017;diff=0.045999999999998264;allowed=0.0386
+1202,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.38;expected_q=5.150000000000005;diff=0.2299999999999951;allowed=0.1076
+1203,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.16;expected_q=3.9000000000000035;diff=0.2599999999999967;allowed=0.08320000000000001
+1205,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.26;expected_q=11.30000000000001;diff=5.04000000000001;allowed=0.2260000000000002
+1206,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.1;expected_q=3.480000000000003;diff=0.380000000000003;allowed=0.06960000000000006
+1213,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1214,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.58;expected_q=1.3620000000000012;diff=0.21799999999999886;allowed=0.0316
+1225,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.01;expected_q=0.8710000000000008;diff=0.13899999999999924;allowed=0.03
+1228,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.46;expected_q=1.5000000000000013;diff=0.04000000000000137;allowed=0.030000000000000027
+1229,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.6;expected_q=1.7020000000000015;diff=0.10200000000000142;allowed=0.03404000000000003
+1230,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.276;expected_q=0.5250000000000005;diff=0.24900000000000044;allowed=0.03
+1231,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.41;expected_q=3.130000000000003;diff=0.27999999999999714;allowed=0.06820000000000001
+1233,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.01;expected_q=0.9580000000000009;diff=0.05199999999999916;allowed=0.03
+1243,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.29;expected_q=2.200000000000002;diff=0.08999999999999808;allowed=0.0458
+1248,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.385;expected_q=0.26400000000000023;diff=0.12099999999999977;allowed=0.03
+1256,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.08;expected_q=1.030000000000001;diff=0.049999999999999156;allowed=0.03
+1263,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.51;expected_q=1.6140000000000014;diff=0.10400000000000142;allowed=0.03228000000000003
+1267,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.28;expected_q=1.4000000000000012;diff=0.12000000000000122;allowed=0.03
+1269,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.45;expected_q=2.2700000000000022;diff=0.17999999999999794;allowed=0.049
+1270,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.09;expected_q=2.4030000000000022;diff=0.3130000000000024;allowed=0.04806000000000005
+1275,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.68;expected_q=1.3200000000000012;diff=0.35999999999999877;allowed=0.0336
+1281,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.66;expected_q=2.5840000000000023;diff=0.07599999999999785;allowed=0.053200000000000004
+1283,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.65;expected_q=2.160000000000002;diff=0.510000000000002;allowed=0.04320000000000004
+1292,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.884;expected_q=0.9280000000000008;diff=0.044000000000000816;allowed=0.03
+1295,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.48;expected_q=2.140000000000002;diff=0.3399999999999981;allowed=0.0496
+1300,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.61;expected_q=1.3180000000000012;diff=0.2919999999999989;allowed=0.0322
+1305,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.68;expected_q=2.7500000000000027;diff=0.9299999999999975;allowed=0.0736
+1308,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.71;expected_q=2.500000000000002;diff=0.20999999999999774;allowed=0.0542
+1309,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.59;expected_q=5.296000000000005;diff=0.29399999999999515;allowed=0.1118
+1312,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.66;expected_q=1.8500000000000016;diff=0.8099999999999985;allowed=0.053200000000000004
+1313,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.19;expected_q=1.257000000000001;diff=0.06700000000000106;allowed=0.03
+1314,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.19;expected_q=1.2600000000000011;diff=0.07000000000000117;allowed=0.03
+1320,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.19;expected_q=1.2760000000000011;diff=0.08600000000000119;allowed=0.03
+1321,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1322,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1326,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.32;expected_q=1.9900000000000018;diff=0.6700000000000017;allowed=0.03980000000000004
+1327,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.04;expected_q=2.300000000000002;diff=0.260000000000002;allowed=0.04600000000000004
+1338,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.93;expected_q=6.6600000000000055;diff=1.7300000000000058;allowed=0.13320000000000012
+1341,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.96;expected_q=7.550000000000007;diff=0.590000000000007;allowed=0.15100000000000013
+1345,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.39;expected_q=1.4250000000000012;diff=0.03500000000000125;allowed=0.03
+1351,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.26;expected_q=4.5400000000000045;diff=0.2800000000000047;allowed=0.09080000000000009
+1354,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.24;expected_q=1.7900000000000016;diff=0.4499999999999986;allowed=0.044800000000000006
+1363,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.66;expected_q=4.930000000000004;diff=1.270000000000004;allowed=0.09860000000000009
+1365,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.5;expected_q=2.4310000000000023;diff=0.06899999999999773;allowed=0.05
+1367,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1368,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.34;expected_q=6.380000000000006;diff=1.0400000000000063;allowed=0.12760000000000013
+1371,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1372,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1373,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1380,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1381,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1383,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1385,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.92;expected_q=2.6640000000000024;diff=0.25599999999999756;allowed=0.0584
+1386,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1387,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.23;expected_q=2.440000000000002;diff=0.21000000000000218;allowed=0.048800000000000045
+1390,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.962;expected_q=1.028000000000001;diff=0.06600000000000095;allowed=0.03
+1393,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.78;expected_q=2.115000000000002;diff=0.33500000000000196;allowed=0.04230000000000004
+1396,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.696;expected_q=0.7350000000000007;diff=0.0390000000000007;allowed=0.03
+1400,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.715;expected_q=0.8240000000000007;diff=0.10900000000000076;allowed=0.03
+1403,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.39;expected_q=1.4490000000000012;diff=0.059000000000001274;allowed=0.03
+1405,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.77;expected_q=2.400000000000002;diff=0.6300000000000021;allowed=0.04800000000000004
+1409,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.559;expected_q=0.4500000000000004;diff=0.10899999999999965;allowed=0.03
+1417,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.44;expected_q=1.8200000000000016;diff=0.6199999999999983;allowed=0.0488
+1419,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.2;expected_q=1.3200000000000012;diff=0.12000000000000122;allowed=0.03
+1420,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.54;expected_q=3.320000000000003;diff=0.7800000000000029;allowed=0.06640000000000006
+1421,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.0;expected_q=2.060000000000002;diff=0.06000000000000183;allowed=0.041200000000000035
+1422,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.52;expected_q=2.950000000000003;diff=0.4300000000000028;allowed=0.05900000000000006
+1426,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.27;expected_q=2.150000000000002;diff=0.8800000000000021;allowed=0.043000000000000045
+1427,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.64;expected_q=1.5650000000000013;diff=0.07499999999999862;allowed=0.032799999999999996
+1429,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.01;expected_q=0.9540000000000008;diff=0.05599999999999916;allowed=0.03
+1433,WARN,mean_anomaly_out_of_range,Mittlere Anomalie ma ist ungewoehnlich.,ma=-12.7
+1433,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.794;expected_q=0.7420000000000007;diff=0.05199999999999938;allowed=0.03
+1434,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.89;expected_q=4.270000000000004;diff=0.3800000000000039;allowed=0.08540000000000009
+1437,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.33;expected_q=1.142000000000001;diff=0.18799999999999906;allowed=0.03
+1443,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1444,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1448,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.41;expected_q=2.320000000000002;diff=0.08999999999999808;allowed=0.04820000000000001
+1454,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.57;expected_q=4.640000000000004;diff=1.0700000000000043;allowed=0.09280000000000009
+1462,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.05;expected_q=3.420000000000003;diff=0.3700000000000032;allowed=0.06840000000000006
+1466,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.89;expected_q=4.650000000000004;diff=0.23999999999999577;allowed=0.0978
+1468,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.33;expected_q=1.3600000000000012;diff=0.030000000000001137;allowed=0.03
+1471,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.13;expected_q=3.0160000000000027;diff=0.11399999999999721;allowed=0.0626
+1473,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.88;expected_q=5.300000000000004;diff=0.42000000000000437;allowed=0.1060000000000001
+1474,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.31;expected_q=3.9600000000000035;diff=0.3499999999999961;allowed=0.0862
+1476,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.36;expected_q=2.481000000000002;diff=0.12100000000000222;allowed=0.049620000000000046
+1478,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.75;expected_q=5.550000000000005;diff=0.19999999999999485;allowed=0.115
+1479,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.0;expected_q=6.400000000000006;diff=0.4000000000000057;allowed=0.1280000000000001
+1494,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.5;expected_q=5.780000000000005;diff=2.2800000000000047;allowed=0.11560000000000009
+1496,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.74;expected_q=2.9160000000000026;diff=0.17600000000000238;allowed=0.05832000000000005
+1497,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.37;expected_q=2.453000000000002;diff=0.08300000000000196;allowed=0.04906000000000004
+1499,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.796;expected_q=1.010000000000001;diff=0.21400000000000086;allowed=0.03
+1504,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.87;expected_q=5.0800000000000045;diff=0.2100000000000044;allowed=0.10160000000000009
+1507,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.43;expected_q=3.9520000000000035;diff=0.4779999999999962;allowed=0.0886
+1515,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1516,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.27;expected_q=3.620000000000003;diff=0.3500000000000032;allowed=0.07240000000000006
+1518,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.24;expected_q=4.360000000000004;diff=1.1200000000000037;allowed=0.08720000000000008
+1522,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.6;expected_q=6.454000000000006;diff=0.1459999999999937;allowed=0.132
+1525,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.87;expected_q=7.440000000000007;diff=0.5700000000000065;allowed=0.14880000000000013
+1528,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=11.4;expected_q=9.910000000000009;diff=1.4899999999999913;allowed=0.228
+1540,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.42;expected_q=1.4500000000000013;diff=0.03000000000000136;allowed=0.03
+1544,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.8;expected_q=3.420000000000003;diff=0.3799999999999968;allowed=0.076
+1546,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.76;expected_q=3.6300000000000034;diff=0.12999999999999634;allowed=0.0752
+1548,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.75;expected_q=1.2600000000000011;diff=0.4899999999999989;allowed=0.035
+1552,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.25;expected_q=4.8300000000000045;diff=0.4199999999999955;allowed=0.105
+1555,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.84;expected_q=2.9850000000000025;diff=0.14500000000000268;allowed=0.05970000000000005
+1556,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.78;expected_q=1.7010000000000014;diff=0.07899999999999863;allowed=0.0356
+1561,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.2;expected_q=3.051000000000003;diff=0.14899999999999736;allowed=0.064
+1562,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1565,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.06;expected_q=0.9320000000000008;diff=0.12799999999999923;allowed=0.03
+1567,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1568,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1569,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1572,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1573,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1574,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1603,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1606,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.21;expected_q=2.080000000000002;diff=0.12999999999999812;allowed=0.0442
+1619,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.68;expected_q=3.0600000000000027;diff=0.38000000000000256;allowed=0.06120000000000005
+1624,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.6;expected_q=2.324000000000002;diff=0.275999999999998;allowed=0.052000000000000005
+1625,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.444;expected_q=0.4785000000000004;diff=0.03450000000000042;allowed=0.03
+1629,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.28;expected_q=2.232000000000002;diff=0.04799999999999782;allowed=0.045599999999999995
+1632,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.63;expected_q=2.7000000000000024;diff=0.0700000000000025;allowed=0.05400000000000005
+1638,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=7.57;expected_q=7.740000000000007;diff=0.17000000000000703;allowed=0.15480000000000016
+1643,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.896;expected_q=0.9420000000000008;diff=0.04600000000000082;allowed=0.03
+1644,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.93;expected_q=5.220000000000004;diff=1.290000000000004;allowed=0.10440000000000009
+1650,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.51;expected_q=3.0600000000000027;diff=0.5500000000000029;allowed=0.06120000000000005
+1668,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.57;expected_q=2.6700000000000026;diff=0.10000000000000275;allowed=0.05340000000000005
+1670,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.8;expected_q=2.340000000000002;diff=0.540000000000002;allowed=0.04680000000000004
+1675,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.02;expected_q=1.6400000000000015;diff=0.37999999999999856;allowed=0.0404
+1685,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.5;expected_q=1.341000000000001;diff=0.15899999999999892;allowed=0.03
+1687,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.49;expected_q=2.9800000000000026;diff=0.49000000000000243;allowed=0.059600000000000056
+1703,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.6;expected_q=1.7500000000000016;diff=0.15000000000000147;allowed=0.03500000000000003
+1704,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1707,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.814;expected_q=1.4300000000000013;diff=0.6160000000000013;allowed=0.03
+1708,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.72;expected_q=7.160000000000006;diff=0.4400000000000066;allowed=0.14320000000000013
+1718,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.71;expected_q=3.2500000000000027;diff=0.4599999999999973;allowed=0.0742
+1723,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.3;expected_q=3.1410000000000027;diff=0.15899999999999714;allowed=0.066
+1726,WARN,perihelion_argument_out_of_range,"Perihelargument w liegt ausserhalb [0,360).",w=360.0
+1731,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.15;expected_q=9.110000000000008;diff=3.960000000000008;allowed=0.18220000000000017
+1732,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.95;expected_q=2.300000000000002;diff=0.3500000000000021;allowed=0.04600000000000004
+1734,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.94;expected_q=3.280000000000003;diff=0.659999999999997;allowed=0.0788
+1739,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.56;expected_q=1.6400000000000015;diff=0.0800000000000014;allowed=0.03280000000000003
+1743,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.72;expected_q=1.6240000000000014;diff=0.09599999999999853;allowed=0.0344
+1749,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.29;expected_q=1.4430000000000014;diff=0.15300000000000136;allowed=0.03
+1751,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.62;expected_q=3.7800000000000034;diff=0.16000000000000325;allowed=0.07560000000000007
+1756,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.29;expected_q=1.9400000000000017;diff=0.6500000000000017;allowed=0.038800000000000036
+1757,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.73;expected_q=1.8060000000000016;diff=0.07600000000000162;allowed=0.036120000000000034
+1766,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+1769,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.98;expected_q=9.280000000000008;diff=4.300000000000008;allowed=0.18560000000000018
+1776,WARN,perihelion_argument_out_of_range,"Perihelargument w liegt ausserhalb [0,360).",w=360.0
+1786,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.61;expected_q=1.6800000000000015;diff=0.0700000000000014;allowed=0.03360000000000003
+1791,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.83;expected_q=6.140000000000006;diff=0.6899999999999942;allowed=0.1366
+1792,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=10.3;expected_q=7.100000000000007;diff=3.199999999999994;allowed=0.20600000000000002
+1795,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1798,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.84;expected_q=1.7920000000000016;diff=0.04799999999999849;allowed=0.0368
+1799,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.71;expected_q=1.7910000000000017;diff=0.08100000000000174;allowed=0.03582000000000003
+1801,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.7;expected_q=1.8680000000000017;diff=0.1680000000000017;allowed=0.03736000000000003
+1804,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.2;expected_q=3.7000000000000033;diff=0.5000000000000031;allowed=0.07400000000000007
+1806,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.02;expected_q=2.6200000000000023;diff=0.6000000000000023;allowed=0.05240000000000005
+1809,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.06;expected_q=2.004000000000002;diff=0.05599999999999827;allowed=0.0412
+1810,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.28;expected_q=1.7100000000000015;diff=0.5699999999999983;allowed=0.045599999999999995
+1816,WARN,eccentricity_extreme,Exzentrizitaet e ist sehr hoch.,e=3.35
+1821,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.95;expected_q=6.470000000000006;diff=0.5200000000000058;allowed=0.12940000000000013
+1822,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.24;expected_q=4.520000000000004;diff=0.2800000000000038;allowed=0.09040000000000008
+1823,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.33;expected_q=1.3860000000000012;diff=0.05600000000000116;allowed=0.03
+1827,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.45;expected_q=3.260000000000003;diff=0.18999999999999728;allowed=0.069
+1830,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.09;expected_q=2.9000000000000026;diff=0.18999999999999728;allowed=0.0618
+1849,WARN,mean_anomaly_out_of_range,Mittlere Anomalie ma ist ungewoehnlich.,ma=-145.0
+1854,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.832;expected_q=0.7500000000000007;diff=0.0819999999999993;allowed=0.03
+1856,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.976;expected_q=0.9200000000000008;diff=0.05599999999999916;allowed=0.03
+1857,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.75;expected_q=6.2000000000000055;diff=0.4500000000000055;allowed=0.12400000000000011
+1860,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1861,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.257;expected_q=0.3230000000000003;diff=0.06600000000000028;allowed=0.03
+1867,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.57;expected_q=6.390000000000006;diff=0.1799999999999944;allowed=0.13140000000000002
+1869,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.57;expected_q=6.390000000000006;diff=0.1799999999999944;allowed=0.13140000000000002
+1874,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.44;expected_q=3.528000000000003;diff=0.08800000000000319;allowed=0.07056000000000007
+1875,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.293;expected_q=0.41000000000000036;diff=0.11700000000000038;allowed=0.03
+1883,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1887,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.828;expected_q=0.8900000000000008;diff=0.06200000000000083;allowed=0.03
+1891,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.31;expected_q=2.4300000000000024;diff=0.12000000000000233;allowed=0.048600000000000046
+1892,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.85;expected_q=6.890000000000006;diff=1.0400000000000063;allowed=0.13780000000000012
+1893,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.92;expected_q=4.345000000000004;diff=0.42500000000000426;allowed=0.08690000000000009
+1900,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.64;expected_q=2.9700000000000024;diff=0.3300000000000023;allowed=0.05940000000000005
+1902,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.94;expected_q=4.760000000000004;diff=0.17999999999999616;allowed=0.09880000000000001
+1907,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.44;expected_q=3.528000000000003;diff=0.08800000000000319;allowed=0.07056000000000007
+1908,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.939;expected_q=0.8890000000000008;diff=0.049999999999999156;allowed=0.03
+1909,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=9.33;expected_q=7.410000000000006;diff=1.9199999999999937;allowed=0.18660000000000002
+1910,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.7;expected_q=5.280000000000005;diff=0.5800000000000045;allowed=0.1056000000000001
+1911,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.34;expected_q=3.9300000000000033;diff=0.5900000000000034;allowed=0.07860000000000007
+1916,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.07;expected_q=3.240000000000003;diff=0.17000000000000304;allowed=0.06480000000000005
+1921,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.56;expected_q=2.6800000000000024;diff=0.12000000000000233;allowed=0.05360000000000005
+1927,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.64;expected_q=2.5400000000000023;diff=0.09999999999999787;allowed=0.05280000000000001
+1929,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.92;expected_q=4.345000000000004;diff=0.42500000000000426;allowed=0.08690000000000009
+1936,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.94;expected_q=5.440000000000005;diff=0.49999999999999556;allowed=0.11880000000000002
+1939,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.78;expected_q=1.7340000000000015;diff=0.04599999999999849;allowed=0.0356
+1941,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.85;expected_q=4.990000000000005;diff=0.140000000000005;allowed=0.0998000000000001
+1948,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+1954,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.02;expected_q=1.061500000000001;diff=0.04150000000000098;allowed=0.03
+1958,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.391;expected_q=0.4230000000000004;diff=0.03200000000000036;allowed=0.03
+1960,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.95;expected_q=3.9300000000000033;diff=0.9800000000000031;allowed=0.07860000000000007
+1961,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.19;expected_q=3.600000000000003;diff=0.41000000000000325;allowed=0.07200000000000006
+1962,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.94;expected_q=6.380000000000006;diff=1.4400000000000057;allowed=0.12760000000000013
+1964,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.76;expected_q=5.340000000000005;diff=0.5800000000000054;allowed=0.1068000000000001
+1966,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.09;expected_q=3.9800000000000035;diff=0.8900000000000037;allowed=0.07960000000000007
+1968,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.07;expected_q=6.840000000000006;diff=0.7700000000000058;allowed=0.13680000000000012
+1969,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.84;expected_q=7.000000000000006;diff=0.16000000000000636;allowed=0.14000000000000012
+1971,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.62;expected_q=1.8900000000000017;diff=0.27000000000000157;allowed=0.037800000000000035
+1974,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.62;expected_q=6.280000000000006;diff=0.6600000000000055;allowed=0.1256000000000001
+1975,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.16;expected_q=2.240000000000002;diff=1.080000000000002;allowed=0.04480000000000004
+1981,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.42;expected_q=2.9400000000000026;diff=0.5200000000000027;allowed=0.058800000000000054
+1982,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.35;expected_q=3.340000000000003;diff=0.9900000000000029;allowed=0.06680000000000007
+1984,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.36;expected_q=4.360000000000004;diff=2.000000000000004;allowed=0.08720000000000008
+1986,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.2;expected_q=1.7300000000000015;diff=0.5300000000000016;allowed=0.034600000000000034
+1999,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.18;expected_q=2.8950000000000027;diff=0.2849999999999975;allowed=0.0636
+2000,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=7.06;expected_q=5.070000000000005;diff=1.9899999999999949;allowed=0.1412
+2029,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.26;expected_q=4.8300000000000045;diff=0.5700000000000047;allowed=0.09660000000000009
+2031,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.15;expected_q=3.9200000000000035;diff=0.7700000000000036;allowed=0.07840000000000007
+2037,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.96;expected_q=3.0600000000000027;diff=0.10000000000000275;allowed=0.06120000000000005
+2040,WARN,perihelion_argument_out_of_range,"Perihelargument w liegt ausserhalb [0,360).",w=360.0
+2044,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.9;expected_q=4.080000000000004;diff=0.8199999999999967;allowed=0.098
+2046,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.18;expected_q=5.348000000000004;diff=0.1680000000000046;allowed=0.10696000000000008
+2053,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.03;expected_q=4.390000000000004;diff=1.3600000000000043;allowed=0.08780000000000009
+2061,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.98;expected_q=2.088000000000002;diff=0.10800000000000187;allowed=0.04176000000000004
+2175,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+2182,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.45;expected_q=3.160000000000003;diff=0.28999999999999737;allowed=0.069
+2183,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.45;expected_q=3.300000000000003;diff=0.14999999999999725;allowed=0.069
+2192,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.94;expected_q=4.760000000000004;diff=0.17999999999999616;allowed=0.09880000000000001
+2193,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+2208,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.15;expected_q=3.570000000000003;diff=0.42000000000000304;allowed=0.07140000000000006
+2211,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.42;expected_q=1.3860000000000012;diff=0.0339999999999987;allowed=0.03
+2219,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.99;expected_q=1.9180000000000017;diff=0.07199999999999829;allowed=0.0398
+2231,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.47;expected_q=3.260000000000003;diff=0.2099999999999973;allowed=0.0694
+2234,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.49;expected_q=5.280000000000005;diff=0.7900000000000045;allowed=0.1056000000000001
+2236,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+2237,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.24;expected_q=3.360000000000003;diff=0.12000000000000277;allowed=0.06720000000000007
+2238,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.29;expected_q=2.7400000000000024;diff=0.5499999999999976;allowed=0.0658
+2244,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.0;expected_q=0.9640000000000009;diff=0.035999999999999144;allowed=0.03
+2245,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.28;expected_q=2.364000000000002;diff=0.0840000000000023;allowed=0.047280000000000044
+2246,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.78;expected_q=3.140000000000003;diff=1.3600000000000028;allowed=0.06280000000000005
+2250,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+2253,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+2253,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.38;expected_q=4.520000000000004;diff=0.14000000000000412;allowed=0.09040000000000008
+2256,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.08;expected_q=1.204000000000001;diff=0.124000000000001;allowed=0.03
+2278,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.66;expected_q=5.300000000000004;diff=0.3599999999999959;allowed=0.11320000000000001
+2281,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.06;expected_q=2.910000000000003;diff=0.14999999999999725;allowed=0.061200000000000004
+2286,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.48;expected_q=2.570000000000002;diff=1.090000000000002;allowed=0.05140000000000004
+2292,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.02;expected_q=2.8120000000000025;diff=0.20799999999999752;allowed=0.0604
+2295,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.36;expected_q=2.2500000000000018;diff=0.1099999999999981;allowed=0.0472
+2303,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.26;expected_q=1.5900000000000014;diff=0.3300000000000014;allowed=0.03180000000000003
+2309,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.0;expected_q=0.9640000000000009;diff=0.035999999999999144;allowed=0.03
+2315,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.71;expected_q=3.8040000000000034;diff=0.09400000000000341;allowed=0.07608000000000006
+2316,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.38;expected_q=1.248000000000001;diff=0.13199999999999878;allowed=0.03
+2319,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.55;expected_q=1.6360000000000015;diff=0.08600000000000141;allowed=0.03272000000000003
+2320,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.71;expected_q=3.9000000000000035;diff=0.1900000000000035;allowed=0.07800000000000007
+2335,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.59;expected_q=1.6440000000000015;diff=0.05400000000000138;allowed=0.03288000000000003
+2341,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.78;expected_q=2.8980000000000024;diff=0.11800000000000255;allowed=0.057960000000000046
+2351,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.85;expected_q=6.890000000000006;diff=1.0400000000000063;allowed=0.13780000000000012
+2355,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.28;expected_q=4.044000000000004;diff=0.2359999999999962;allowed=0.08560000000000001
+2364,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.57;expected_q=2.6700000000000026;diff=0.10000000000000275;allowed=0.05340000000000005
+2367,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.63;expected_q=0.4450000000000004;diff=0.1849999999999996;allowed=0.03
+2375,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.76;expected_q=2.8800000000000026;diff=0.12000000000000277;allowed=0.057600000000000054
+2376,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.48;expected_q=5.730000000000005;diff=0.25000000000000444;allowed=0.1146000000000001
+2378,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.57;expected_q=13.00000000000001;diff=6.43000000000001;allowed=0.26000000000000023
+2381,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.33;expected_q=1.284400000000001;diff=0.045599999999998975;allowed=0.03
+2390,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.9;expected_q=3.140000000000003;diff=0.24000000000000288;allowed=0.06280000000000005
+2396,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.84;expected_q=1.7760000000000016;diff=0.0639999999999985;allowed=0.0368
+2403,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.74;expected_q=1.7970000000000015;diff=0.057000000000001494;allowed=0.03594000000000003
+2408,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.944;expected_q=0.8820000000000008;diff=0.06199999999999917;allowed=0.03
+2413,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.37;expected_q=1.7200000000000015;diff=0.6499999999999986;allowed=0.047400000000000005
+2419,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.458;expected_q=0.6000000000000005;diff=0.14200000000000051;allowed=0.03
+2423,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=7.62;expected_q=5.7400000000000055;diff=1.8799999999999946;allowed=0.1524
+2426,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=9.19;expected_q=15.900000000000015;diff=6.710000000000015;allowed=0.3180000000000003
+2428,WARN,mean_anomaly_out_of_range,Mittlere Anomalie ma ist ungewoehnlich.,ma=-131.0
+2431,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.896;expected_q=1.0000000000000009;diff=0.10400000000000087;allowed=0.03
+2433,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.04;expected_q=2.320000000000002;diff=0.280000000000002;allowed=0.046400000000000045
+2465,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.06;expected_q=1.106000000000001;diff=0.04600000000000093;allowed=0.03
+2471,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.55;expected_q=3.9040000000000035;diff=0.35400000000000365;allowed=0.07808000000000007
+2472,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.97;expected_q=4.050000000000003;diff=0.9199999999999964;allowed=0.0994
+2475,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.21;expected_q=3.300000000000003;diff=0.09000000000000297;allowed=0.06600000000000006
+2479,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.846;expected_q=1.060000000000001;diff=0.21400000000000097;allowed=0.03
+2493,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.08;expected_q=3.6600000000000033;diff=0.4199999999999968;allowed=0.0816
+2505,WARN,node_longitude_out_of_range,"Knotenlaenge om liegt ausserhalb [0,360).",om=360.0
+2508,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.31;expected_q=2.4300000000000024;diff=0.12000000000000233;allowed=0.048600000000000046
+2514,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.69;expected_q=11.40000000000001;diff=4.710000000000009;allowed=0.2280000000000002
+2524,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.35;expected_q=5.576000000000005;diff=0.2260000000000053;allowed=0.1115200000000001
+2530,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.9;expected_q=3.520000000000003;diff=1.3799999999999972;allowed=0.098
+2531,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.95;expected_q=3.0850000000000026;diff=0.13500000000000245;allowed=0.06170000000000005
+2534,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.7;expected_q=5.070000000000005;diff=0.6299999999999955;allowed=0.114
+2542,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.17;expected_q=1.128000000000001;diff=0.04199999999999893;allowed=0.03
+2543,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.81;expected_q=1.7640000000000016;diff=0.04599999999999849;allowed=0.0362
+2549,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.43;expected_q=3.664000000000003;diff=0.23400000000000265;allowed=0.07328000000000005
+2559,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=5.42;expected_q=5.566000000000005;diff=0.14600000000000524;allowed=0.1113200000000001
+2606,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.53;expected_q=0.49200000000000044;diff=0.03799999999999959;allowed=0.03
+2608,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.88;expected_q=2.7600000000000025;diff=0.11999999999999744;allowed=0.0576
+2612,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=4.0;expected_q=3.340000000000003;diff=0.659999999999997;allowed=0.08
+2613,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.01;expected_q=3.0600000000000027;diff=1.050000000000003;allowed=0.06120000000000005
+2618,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.07;expected_q=1.132000000000001;diff=0.06200000000000094;allowed=0.03
+2629,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.58;expected_q=3.220000000000003;diff=0.3599999999999972;allowed=0.0716
+2639,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.83;expected_q=2.8920000000000026;diff=0.0620000000000025;allowed=0.05784000000000005
+2640,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=10.8;expected_q=10.54000000000001;diff=0.2599999999999909;allowed=0.21600000000000003
+2642,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+2643,WARN,eccentricity_extreme,Exzentrizitaet e ist sehr hoch.,e=6.14
+2644,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+2645,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=6.53;expected_q=6.800000000000006;diff=0.2700000000000058;allowed=0.13600000000000012
+2652,WARN,incomplete_core_fields,Orbitdatensatz hat fehlende Kernfelder.,"missing=e,a,q,i,om,w"
+2655,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.29;expected_q=2.7600000000000025;diff=0.4700000000000024;allowed=0.05520000000000005
+2656,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=10.1;expected_q=10.56000000000001;diff=0.46000000000000973;allowed=0.2112000000000002
+2666,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.11;expected_q=2.3580000000000023;diff=0.24800000000000244;allowed=0.04716000000000005
+2671,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.24;expected_q=2.160000000000002;diff=0.0799999999999983;allowed=0.044800000000000006
+2673,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.463;expected_q=0.5970000000000005;diff=0.1340000000000005;allowed=0.03
+2684,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.6;expected_q=4.340000000000003;diff=1.7400000000000033;allowed=0.08680000000000007
+2690,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.28;expected_q=1.236000000000001;diff=0.04399999999999893;allowed=0.03
+2696,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.549;expected_q=0.4800000000000004;diff=0.06899999999999962;allowed=0.03
+2703,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.362;expected_q=0.4720000000000005;diff=0.11000000000000049;allowed=0.03
+2708,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=0.451;expected_q=0.39000000000000035;diff=0.060999999999999666;allowed=0.03
+2711,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.07;expected_q=1.008000000000001;diff=0.06199999999999917;allowed=0.03
+2717,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.85;expected_q=3.7800000000000034;diff=0.9300000000000033;allowed=0.07560000000000007
+2723,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.94;expected_q=1.5820000000000014;diff=0.35799999999999854;allowed=0.0388
+2728,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.1;expected_q=1.158000000000001;diff=0.05800000000000094;allowed=0.03
+2730,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.17;expected_q=1.5300000000000014;diff=0.6399999999999986;allowed=0.0434
+2731,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.81;expected_q=1.3600000000000012;diff=0.44999999999999885;allowed=0.0362
+2736,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.27;expected_q=0.9860000000000009;diff=0.28399999999999914;allowed=0.03
+2738,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.04;expected_q=1.080000000000001;diff=0.040000000000000924;allowed=0.03
+2739,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.78;expected_q=1.4700000000000013;diff=0.3099999999999987;allowed=0.0356
+2740,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.17;expected_q=1.5280000000000014;diff=0.35800000000000143;allowed=0.030560000000000028
+2741,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.67;expected_q=2.8500000000000023;diff=0.8199999999999976;allowed=0.0734
+2742,ERROR,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=3.37;expected_q=6.600000000000006;diff=3.2300000000000058;allowed=0.13200000000000012
+2744,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=2.02;expected_q=1.9700000000000017;diff=0.04999999999999827;allowed=0.0404
+2745,WARN,q_inconsistent_with_a_e,q passt nicht zur Beziehung q = a * (1 - e).,q=1.22;expected_q=1.1310000000000011;diff=0.08899999999999886;allowed=0.03
