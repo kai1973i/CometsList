@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CometsList Orbit Explorer</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+      :root {
+        --bg: #fcfbf7;
+        --bg-accent: #f4ecd8;
+        --ink: #1f252f;
+        --muted: #5b6370;
+        --panel: #ffffff;
+        --line: #d8d3c4;
+        --brand: #9c5a1a;
+        --brand-soft: #ead8bb;
+        --ok: #1d6f3a;
+        --warn: #7a3a20;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 10% 10%, #fff8e8 0%, transparent 35%),
+          radial-gradient(circle at 90% 20%, #f2f0ff 0%, transparent 30%),
+          linear-gradient(180deg, var(--bg) 0%, #f6f6f1 100%);
+        min-height: 100vh;
+      }
+
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 28px 18px 40px;
+      }
+
+      .hero {
+        background: linear-gradient(130deg, #fff6df 0%, #ffffff 55%, #eef3ff 100%);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 24px;
+        box-shadow: 0 18px 36px -30px rgba(33, 40, 52, 0.6);
+        animation: rise 0.55s ease;
+      }
+
+      .kicker {
+        display: inline-block;
+        background: var(--brand-soft);
+        color: #5a300f;
+        border-radius: 999px;
+        padding: 7px 12px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 14px 0 8px;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(2rem, 2.8vw, 3rem);
+        line-height: 1.05;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      .grid {
+        margin-top: 18px;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 14px 14px 12px;
+      }
+
+      .card .label {
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .card .value {
+        margin-top: 6px;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .layout {
+        margin-top: 18px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1.5fr 1fr;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px;
+      }
+
+      .panel h2 {
+        margin: 0 0 8px;
+        font-family: "Fraunces", serif;
+        font-size: 1.35rem;
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      label {
+        font-size: 0.85rem;
+        color: var(--muted);
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 9px 10px;
+        font: inherit;
+        background: #fff;
+      }
+
+      .hint {
+        color: var(--muted);
+        font-size: 0.85rem;
+        margin: 6px 0 0;
+      }
+
+      .table-wrap {
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        max-height: 520px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+
+      th,
+      td {
+        text-align: left;
+        border-bottom: 1px solid #ece8db;
+        padding: 8px 10px;
+        vertical-align: top;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        background: #fff9ec;
+        z-index: 1;
+      }
+
+      .score-pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 3px 8px;
+        font-weight: 700;
+        font-size: 0.78rem;
+      }
+
+      .score-strong {
+        background: #e4f6e9;
+        color: var(--ok);
+      }
+
+      .score-medium {
+        background: #fff5df;
+        color: #7a5a15;
+      }
+
+      .score-soft {
+        background: #fde8df;
+        color: var(--warn);
+      }
+
+      .group-list {
+        display: grid;
+        gap: 10px;
+        max-height: 620px;
+        overflow: auto;
+      }
+
+      .group-item {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px;
+        background: #fffefb;
+      }
+
+      .group-title {
+        font-weight: 700;
+      }
+
+      .group-members {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .status {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 980px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .layout {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .controls {
+          grid-template-columns: 1fr;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="kicker">CometsList · GitHub Pages</span>
+        <h1>Orbit Explorer fuer Kometen</h1>
+        <p class="subtitle">
+          Diese Seite zeigt die aktuell publizierten Analyseergebnisse aus
+          <strong>similar_orbits.csv</strong> und <strong>exact_orbit_groups.csv</strong>.
+        </p>
+      </section>
+
+      <section class="grid" id="stats"></section>
+
+      <section class="layout">
+        <article class="panel">
+          <h2>Aehnliche Orbit-Paare</h2>
+          <div class="controls">
+            <div>
+              <label for="search">Suche (ID oder Name)</label>
+              <input id="search" type="text" placeholder="z. B. Hill, 240P, 246" />
+            </div>
+            <div>
+              <label for="scoreMax">Max. Score</label>
+              <input id="scoreMax" type="number" min="0" max="2" step="0.01" value="1.00" />
+            </div>
+            <div>
+              <label for="limit">Anzahl Zeilen</label>
+              <select id="limit">
+                <option value="25">25</option>
+                <option value="50" selected>50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Comet A</th>
+                  <th>Comet B</th>
+                  <th>Score</th>
+                  <th>de</th>
+                  <th>dq</th>
+                  <th>di</th>
+                  <th>dom</th>
+                  <th>dw</th>
+                  <th>da_rel</th>
+                </tr>
+              </thead>
+              <tbody id="pairsBody"></tbody>
+            </table>
+          </div>
+          <p class="hint" id="pairsHint"></p>
+        </article>
+
+        <aside class="panel">
+          <h2>Exakte Orbit-Gruppen</h2>
+          <div class="group-list" id="groupList"></div>
+          <p class="hint" id="groupHint"></p>
+        </aside>
+      </section>
+
+      <p class="status" id="status">Lade Ergebnisdateien ...</p>
+    </main>
+
+    <script>
+      function parseCSV(text) {
+        const rows = [];
+        let row = [];
+        let value = "";
+        let inQuotes = false;
+
+        for (let i = 0; i < text.length; i += 1) {
+          const char = text[i];
+          const next = text[i + 1];
+
+          if (inQuotes) {
+            if (char === '"' && next === '"') {
+              value += '"';
+              i += 1;
+            } else if (char === '"') {
+              inQuotes = false;
+            } else {
+              value += char;
+            }
+          } else if (char === '"') {
+            inQuotes = true;
+          } else if (char === ',') {
+            row.push(value);
+            value = "";
+          } else if (char === '\n') {
+            row.push(value);
+            rows.push(row);
+            row = [];
+            value = "";
+          } else if (char !== '\r') {
+            value += char;
+          }
+        }
+
+        if (value.length > 0 || row.length > 0) {
+          row.push(value);
+          rows.push(row);
+        }
+
+        if (rows.length === 0) return [];
+        const header = rows[0];
+        return rows.slice(1).filter((r) => r.length > 1).map((r) => {
+          const obj = {};
+          for (let i = 0; i < header.length; i += 1) {
+            obj[header[i]] = r[i] ?? "";
+          }
+          return obj;
+        });
+      }
+
+      function scoreClass(score) {
+        if (score <= 0.45) return "score-pill score-strong";
+        if (score <= 0.8) return "score-pill score-medium";
+        return "score-pill score-soft";
+      }
+
+      function toNumber(val, fallback = 0) {
+        const n = Number(val);
+        return Number.isFinite(n) ? n : fallback;
+      }
+
+      function buildStats(pairs, groups) {
+        const maxGroup = groups.reduce((max, item) => Math.max(max, toNumber(item.group_size, 0)), 0);
+        const bestScore = pairs.length > 0 ? toNumber(pairs[0].score, 0) : 0;
+        const statItems = [
+          { label: "Aehnliche Paare", value: pairs.length.toLocaleString("de-DE") },
+          { label: "Exakte Gruppen", value: new Set(groups.map((g) => g.group_id)).size.toLocaleString("de-DE") },
+          { label: "Groesste Gruppe", value: maxGroup.toLocaleString("de-DE") },
+          { label: "Bester Score", value: bestScore.toFixed(3) },
+        ];
+
+        const statsNode = document.getElementById("stats");
+        statsNode.innerHTML = statItems
+          .map(
+            (item) =>
+              `<article class="card"><div class="label">${item.label}</div><div class="value">${item.value}</div></article>`,
+          )
+          .join("");
+      }
+
+      function renderGroups(groupRows, maxGroups = 40) {
+        const groupMap = new Map();
+        for (const row of groupRows) {
+          if (!groupMap.has(row.group_id)) {
+            groupMap.set(row.group_id, []);
+          }
+          groupMap.get(row.group_id).push(row);
+        }
+
+        const groups = Array.from(groupMap.entries())
+          .map(([groupId, members]) => ({
+            groupId,
+            size: toNumber(members[0]?.group_size, members.length),
+            members,
+          }))
+          .sort((a, b) => b.size - a.size);
+
+        const container = document.getElementById("groupList");
+        container.innerHTML = groups
+          .slice(0, maxGroups)
+          .map((group) => {
+            const memberText = group.members
+              .map((m) => `${m.comet_id}: ${m.name}`)
+              .join(" · ");
+            return `<div class="group-item"><div class="group-title">Gruppe ${group.groupId} (${group.size})</div><div class="group-members">${memberText}</div></div>`;
+          })
+          .join("");
+
+        document.getElementById("groupHint").textContent = `${groups.length} Gruppen geladen, Anzeige: ${Math.min(groups.length, maxGroups)}.`;
+      }
+
+      function renderPairs(allPairs) {
+        const q = document.getElementById("search").value.trim().toLowerCase();
+        const scoreMax = toNumber(document.getElementById("scoreMax").value, 1);
+        const limit = toNumber(document.getElementById("limit").value, 50);
+
+        const filtered = allPairs.filter((row) => {
+          const score = toNumber(row.score, 999);
+          if (score > scoreMax) return false;
+
+          if (!q) return true;
+          const hay = `${row.comet_id_1} ${row.name_1} ${row.comet_id_2} ${row.name_2}`.toLowerCase();
+          return hay.includes(q);
+        });
+
+        const shown = filtered.slice(0, limit);
+        const body = document.getElementById("pairsBody");
+
+        body.innerHTML = shown
+          .map((row) => {
+            const score = toNumber(row.score, 0);
+            return `
+              <tr>
+                <td>${row.comet_id_1}: ${row.name_1}</td>
+                <td>${row.comet_id_2}: ${row.name_2}</td>
+                <td><span class="${scoreClass(score)}">${score.toFixed(3)}</span></td>
+                <td>${toNumber(row.de).toFixed(3)}</td>
+                <td>${toNumber(row.dq).toFixed(3)}</td>
+                <td>${toNumber(row.di).toFixed(3)}</td>
+                <td>${toNumber(row.dom).toFixed(3)}</td>
+                <td>${toNumber(row.dw).toFixed(3)}</td>
+                <td>${toNumber(row.da_rel).toFixed(3)}</td>
+              </tr>
+            `;
+          })
+          .join("");
+
+        document.getElementById("pairsHint").textContent = `${filtered.length} Treffer nach Filter, Anzeige: ${shown.length}.`;
+      }
+
+      async function loadData() {
+        try {
+          const [pairsRes, groupsRes] = await Promise.all([
+            fetch("data/similar_orbits.csv", { cache: "no-store" }),
+            fetch("data/exact_orbit_groups.csv", { cache: "no-store" }),
+          ]);
+
+          if (!pairsRes.ok || !groupsRes.ok) {
+            throw new Error("CSV-Dateien konnten nicht geladen werden.");
+          }
+
+          const [pairsText, groupsText] = await Promise.all([pairsRes.text(), groupsRes.text()]);
+          const pairs = parseCSV(pairsText).sort((a, b) => toNumber(a.score, 999) - toNumber(b.score, 999));
+          const groups = parseCSV(groupsText);
+
+          buildStats(pairs, groups);
+          renderGroups(groups);
+          renderPairs(pairs);
+
+          document.getElementById("search").addEventListener("input", () => renderPairs(pairs));
+          document.getElementById("scoreMax").addEventListener("input", () => renderPairs(pairs));
+          document.getElementById("limit").addEventListener("change", () => renderPairs(pairs));
+
+          document.getElementById("status").textContent =
+            "Ergebnis geladen. Quelle: data/similar_orbits.csv und data/exact_orbit_groups.csv";
+        } catch (error) {
+          document.getElementById("status").textContent = `Fehler beim Laden: ${error.message}`;
+        }
+      }
+
+      loadData();
+    </script>
+  </body>
+</html>
