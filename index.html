@@ -132,6 +132,13 @@
         margin-bottom: 10px;
       }
 
+      .controls-groups {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 10px;
+        margin: 6px 0 12px;
+      }
+
       label {
         display: block;
         font-size: 0.84rem;
@@ -140,13 +147,18 @@
       }
 
       input,
-      select {
+      select,
+      button {
         width: 100%;
         border: 1px solid var(--line);
         border-radius: 10px;
         padding: 9px 10px;
         font: inherit;
         background: #fff;
+      }
+
+      button {
+        cursor: pointer;
       }
 
       .table-wrap {
@@ -210,28 +222,85 @@
         color: var(--warn);
       }
 
+      .size-small {
+        background: #eef2ff;
+        color: #334497;
+      }
+
+      .size-medium {
+        background: #e8f7ef;
+        color: #1f6b3d;
+      }
+
+      .size-large {
+        background: #fff3e0;
+        color: #8a4d00;
+      }
+
       .group-list {
         display: grid;
         gap: 10px;
-        max-height: 410px;
+        max-height: 470px;
         overflow: auto;
       }
 
-      .group-item {
+      .group-accordion {
         border: 1px solid var(--line);
         border-radius: 12px;
-        padding: 10px;
         background: #fffefb;
+        overflow: hidden;
       }
 
-      .group-title {
+      .group-accordion summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .group-accordion summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .group-head {
+        display: grid;
+        gap: 8px;
+      }
+
+      .group-head-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
         font-weight: 700;
       }
 
+      .group-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .group-meta {
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .group-detail {
+        border-top: 1px solid var(--line);
+        padding: 10px;
+      }
+
       .group-members {
-        margin: 6px 0 0;
+        margin: 0;
         color: var(--muted);
         font-size: 0.9rem;
+      }
+
+      .group-action {
+        margin-top: 8px;
+        width: auto;
+        display: inline-block;
+        background: #fff;
       }
 
       .mini-grid {
@@ -274,6 +343,7 @@
         .grid,
         .controls,
         .controls-issues,
+        .controls-groups,
         .mini-grid {
           grid-template-columns: 1fr;
         }
@@ -337,6 +407,30 @@
 
         <aside class="panel">
           <h2>Exakte Orbit-Gruppen</h2>
+          <div class="controls-groups">
+            <div>
+              <label for="searchGroups">Suche Gruppe (ID oder Name)</label>
+              <input id="searchGroups" type="text" placeholder="z. B. 240P, Hill, Gruppe 3" />
+            </div>
+            <div>
+              <label for="groupMinSize">Mindestgroesse</label>
+              <select id="groupMinSize">
+                <option value="1">>= 1</option>
+                <option value="2" selected>>= 2</option>
+                <option value="3">>= 3</option>
+                <option value="4">>= 4</option>
+              </select>
+            </div>
+            <div>
+              <label for="groupLimit">Anzahl Gruppen</label>
+              <select id="groupLimit">
+                <option value="15">15</option>
+                <option value="30" selected>30</option>
+                <option value="60">60</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
           <div class="group-list" id="groupList"></div>
           <p class="hint" id="groupHint"></p>
 
@@ -462,12 +556,48 @@
         return sev === "ERROR" ? "pill sev-error" : "pill sev-warn";
       }
 
+      function groupSizeClass(size) {
+        if (size >= 5) return "pill size-large";
+        if (size >= 3) return "pill size-medium";
+        return "pill size-small";
+      }
+
       function mapSummary(summaryRows) {
         const map = {};
         for (const row of summaryRows) {
           map[row.metric] = row.value;
         }
         return map;
+      }
+
+      function groupMetrics(members) {
+        const keys = ["e", "q", "i"];
+        const out = {};
+        for (const key of keys) {
+          const vals = members
+            .map((m) => toNumber(m[key], Number.NaN))
+            .filter((v) => Number.isFinite(v));
+          if (vals.length === 0) continue;
+          const min = Math.min(...vals);
+          const max = Math.max(...vals);
+          const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+          out[key] = { min, max, mean };
+        }
+        return out;
+      }
+
+      function buildIssueStats(issues) {
+        const byComet = new Map();
+        for (const issue of issues) {
+          const id = issue.comet_id;
+          if (!byComet.has(id)) {
+            byComet.set(id, { ERROR: 0, WARN: 0 });
+          }
+          const bucket = byComet.get(id);
+          if (issue.severity === "ERROR") bucket.ERROR += 1;
+          if (issue.severity === "WARN") bucket.WARN += 1;
+        }
+        return byComet;
       }
 
       function buildStats(pairs, groups, summary) {
@@ -488,7 +618,7 @@
           .join("");
       }
 
-      function renderGroups(groupRows, maxGroups = 32) {
+      function collectGroups(groupRows) {
         const groupMap = new Map();
         for (const row of groupRows) {
           if (!groupMap.has(row.group_id)) {
@@ -497,23 +627,110 @@
           groupMap.get(row.group_id).push(row);
         }
 
-        const groups = Array.from(groupMap.entries())
+        return Array.from(groupMap.entries())
           .map(([groupId, members]) => ({
             groupId,
             size: toNumber(members[0]?.group_size, members.length),
             members,
+            metrics: groupMetrics(members),
           }))
-          .sort((a, b) => b.size - a.size);
+          .sort((a, b) => b.size - a.size || Number(a.groupId) - Number(b.groupId));
+      }
 
-        document.getElementById("groupList").innerHTML = groups
-          .slice(0, maxGroups)
-          .map((group) => {
-            const memberText = group.members.map((m) => `${m.comet_id}: ${m.name}`).join(" · ");
-            return `<div class="group-item"><div class="group-title">Gruppe ${group.groupId} (${group.size})</div><div class="group-members">${memberText}</div></div>`;
-          })
-          .join("");
+      function jumpToIssuesForGroup(group, allIssues) {
+        const ids = new Set(group.members.map((m) => String(m.comet_id)));
+        const errorCount = allIssues.filter((x) => ids.has(String(x.comet_id)) && x.severity === "ERROR").length;
 
-        document.getElementById("groupHint").textContent = `${groups.length} Gruppen geladen, Anzeige: ${Math.min(groups.length, maxGroups)}.`;
+        document.getElementById("searchIssues").value = Array.from(ids).join(" ");
+        document.getElementById("severityFilter").value = errorCount > 0 ? "ERROR" : "ALL";
+        document.getElementById("issuesLimit").value = "100";
+        renderIssues(allIssues);
+        document.getElementById("issuesBody").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function renderGroups(groupRows, issueStatsByComet, allIssues) {
+        const q = document.getElementById("searchGroups").value.trim().toLowerCase();
+        const minSize = toNumber(document.getElementById("groupMinSize").value, 2);
+        const limit = toNumber(document.getElementById("groupLimit").value, 30);
+
+        const allGroups = collectGroups(groupRows);
+        const filtered = allGroups.filter((group) => {
+          if (group.size < minSize) {
+            return false;
+          }
+          if (!q) {
+            return true;
+          }
+
+          const hay = [
+            `gruppe ${group.groupId}`,
+            ...group.members.map((m) => `${m.comet_id} ${m.name}`),
+          ]
+            .join(" ")
+            .toLowerCase();
+          return hay.includes(q);
+        });
+
+        const shown = filtered.slice(0, limit);
+        const node = document.getElementById("groupList");
+
+        node.innerHTML = "";
+        for (const group of shown) {
+          let errorCount = 0;
+          let warnCount = 0;
+          for (const m of group.members) {
+            const stat = issueStatsByComet.get(String(m.comet_id));
+            if (!stat) continue;
+            errorCount += stat.ERROR;
+            warnCount += stat.WARN;
+          }
+
+          const eMeta = group.metrics.e
+            ? `e: ${group.metrics.e.mean.toFixed(3)} (${group.metrics.e.min.toFixed(3)}-${group.metrics.e.max.toFixed(3)})`
+            : "e: n/a";
+          const qMeta = group.metrics.q
+            ? `q: ${group.metrics.q.mean.toFixed(3)} (${group.metrics.q.min.toFixed(3)}-${group.metrics.q.max.toFixed(3)})`
+            : "q: n/a";
+          const iMeta = group.metrics.i
+            ? `i: ${group.metrics.i.mean.toFixed(3)} (${group.metrics.i.min.toFixed(3)}-${group.metrics.i.max.toFixed(3)})`
+            : "i: n/a";
+          const memberText = group.members.map((m) => `${m.comet_id}: ${m.name}`).join(" · ");
+
+          const details = document.createElement("details");
+          details.className = "group-accordion";
+
+          const summary = document.createElement("summary");
+          summary.innerHTML = `
+            <div class="group-head">
+              <div class="group-head-title">
+                <span>Gruppe ${group.groupId}</span>
+                <span class="group-badges">
+                  <span class="${groupSizeClass(group.size)}">${group.size} Mitglieder</span>
+                  <span class="pill sev-error">ERROR ${errorCount}</span>
+                  <span class="pill sev-warn">WARN ${warnCount}</span>
+                </span>
+              </div>
+              <div class="group-meta">${eMeta} · ${qMeta} · ${iMeta}</div>
+            </div>
+          `;
+
+          const detailBody = document.createElement("div");
+          detailBody.className = "group-detail";
+          detailBody.innerHTML = `
+            <p class="group-members">${memberText}</p>
+            <button type="button" class="group-action">Issues dieser Gruppe anzeigen</button>
+          `;
+
+          detailBody.querySelector("button").addEventListener("click", () => {
+            jumpToIssuesForGroup(group, allIssues);
+          });
+
+          details.appendChild(summary);
+          details.appendChild(detailBody);
+          node.appendChild(details);
+        }
+
+        document.getElementById("groupHint").textContent = `${filtered.length} Gruppen nach Filter, Anzeige: ${shown.length}.`;
       }
 
       function renderValidationMini(summary) {
@@ -532,8 +749,7 @@
           })
           .join("");
 
-        document.getElementById("validationHint").textContent =
-          "Quelle: data/orbit_plausibility_summary.csv";
+        document.getElementById("validationHint").textContent = "Quelle: data/orbit_plausibility_summary.csv";
       }
 
       function renderPairs(allPairs) {
@@ -624,16 +840,22 @@
           const groups = parseCSV(groupsText);
           const issues = parseCSV(issuesText);
           const summary = mapSummary(parseCSV(summaryText));
+          const issueStatsByComet = buildIssueStats(issues);
 
           buildStats(pairs, groups, summary);
-          renderGroups(groups);
           renderValidationMini(summary);
           renderPairs(pairs);
           renderIssues(issues);
+          renderGroups(groups, issueStatsByComet, issues);
 
           document.getElementById("searchPairs").addEventListener("input", () => renderPairs(pairs));
           document.getElementById("scoreMax").addEventListener("input", () => renderPairs(pairs));
           document.getElementById("pairsLimit").addEventListener("change", () => renderPairs(pairs));
+
+          const rerenderGroups = () => renderGroups(groups, issueStatsByComet, issues);
+          document.getElementById("searchGroups").addEventListener("input", rerenderGroups);
+          document.getElementById("groupMinSize").addEventListener("change", rerenderGroups);
+          document.getElementById("groupLimit").addEventListener("change", rerenderGroups);
 
           document.getElementById("searchIssues").addEventListener("input", () => renderIssues(issues));
           document.getElementById("severityFilter").addEventListener("change", () => renderIssues(issues));
