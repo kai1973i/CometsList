@@ -9,7 +9,6 @@
 
       :root {
         --bg: #fcfbf7;
-        --bg-accent: #f4ecd8;
         --ink: #1f252f;
         --muted: #5b6370;
         --panel: #ffffff;
@@ -17,7 +16,8 @@
         --brand: #9c5a1a;
         --brand-soft: #ead8bb;
         --ok: #1d6f3a;
-        --warn: #7a3a20;
+        --warn: #8a5411;
+        --error: #8a1f24;
       }
 
       * {
@@ -31,14 +31,13 @@
         background:
           radial-gradient(circle at 10% 10%, #fff8e8 0%, transparent 35%),
           radial-gradient(circle at 90% 20%, #f2f0ff 0%, transparent 30%),
-          linear-gradient(180deg, var(--bg) 0%, #f6f6f1 100%);
-        min-height: 100vh;
+          linear-gradient(180deg, #fcfbf7 0%, #f6f6f1 100%);
       }
 
       .wrap {
         max-width: 1180px;
         margin: 0 auto;
-        padding: 28px 18px 40px;
+        padding: 28px 18px 42px;
       }
 
       .hero {
@@ -47,7 +46,6 @@
         border-radius: 22px;
         padding: 24px;
         box-shadow: 0 18px 36px -30px rgba(33, 40, 52, 0.6);
-        animation: rise 0.55s ease;
       }
 
       .kicker {
@@ -73,31 +71,30 @@
       .subtitle {
         margin: 0;
         color: var(--muted);
-        font-size: 1.02rem;
       }
 
       .grid {
         margin-top: 18px;
         display: grid;
         gap: 12px;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
       }
 
       .card {
         background: var(--panel);
         border: 1px solid var(--line);
         border-radius: 16px;
-        padding: 14px 14px 12px;
+        padding: 14px;
       }
 
-      .card .label {
+      .label {
         color: var(--muted);
-        font-size: 0.84rem;
+        font-size: 0.82rem;
       }
 
-      .card .value {
+      .value {
         margin-top: 6px;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 700;
       }
 
@@ -128,10 +125,17 @@
         margin-bottom: 10px;
       }
 
+      .controls-issues {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
       label {
-        font-size: 0.85rem;
-        color: var(--muted);
         display: block;
+        font-size: 0.84rem;
+        color: var(--muted);
         margin-bottom: 4px;
       }
 
@@ -143,12 +147,6 @@
         padding: 9px 10px;
         font: inherit;
         background: #fff;
-      }
-
-      .hint {
-        color: var(--muted);
-        font-size: 0.85rem;
-        margin: 6px 0 0;
       }
 
       .table-wrap {
@@ -179,7 +177,7 @@
         z-index: 1;
       }
 
-      .score-pill {
+      .pill {
         display: inline-block;
         border-radius: 999px;
         padding: 3px 8px;
@@ -199,13 +197,23 @@
 
       .score-soft {
         background: #fde8df;
+        color: #7a3a20;
+      }
+
+      .sev-error {
+        background: #fde6e7;
+        color: var(--error);
+      }
+
+      .sev-warn {
+        background: #fff4de;
         color: var(--warn);
       }
 
       .group-list {
         display: grid;
         gap: 10px;
-        max-height: 620px;
+        max-height: 410px;
         overflow: auto;
       }
 
@@ -226,26 +234,35 @@
         font-size: 0.9rem;
       }
 
+      .mini-grid {
+        margin-top: 10px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mini {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fffefb;
+        padding: 10px;
+      }
+
+      .hint {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
       .status {
         margin-top: 14px;
         color: var(--muted);
         font-size: 0.9rem;
       }
 
-      @keyframes rise {
-        from {
-          opacity: 0;
-          transform: translateY(8px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @media (max-width: 980px) {
+      @media (max-width: 1100px) {
         .grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
         .layout {
@@ -253,12 +270,11 @@
         }
       }
 
-      @media (max-width: 640px) {
-        .controls {
-          grid-template-columns: 1fr;
-        }
-
-        .grid {
+      @media (max-width: 680px) {
+        .grid,
+        .controls,
+        .controls-issues,
+        .mini-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -270,8 +286,7 @@
         <span class="kicker">CometsList · GitHub Pages</span>
         <h1>Orbit Explorer fuer Kometen</h1>
         <p class="subtitle">
-          Diese Seite zeigt die aktuell publizierten Analyseergebnisse aus
-          <strong>similar_orbits.csv</strong> und <strong>exact_orbit_groups.csv</strong>.
+          Visualisierung von Aehnlichkeitsanalyse und Plausibilitaetspruefung aus CSV-Dateien.
         </p>
       </section>
 
@@ -282,16 +297,16 @@
           <h2>Aehnliche Orbit-Paare</h2>
           <div class="controls">
             <div>
-              <label for="search">Suche (ID oder Name)</label>
-              <input id="search" type="text" placeholder="z. B. Hill, 240P, 246" />
+              <label for="searchPairs">Suche (ID oder Name)</label>
+              <input id="searchPairs" type="text" placeholder="z. B. Hill, 240P, 246" />
             </div>
             <div>
               <label for="scoreMax">Max. Score</label>
-              <input id="scoreMax" type="number" min="0" max="2" step="0.01" value="1.00" />
+              <input id="scoreMax" type="number" min="0" max="3" step="0.01" value="1.00" />
             </div>
             <div>
-              <label for="limit">Anzahl Zeilen</label>
-              <select id="limit">
+              <label for="pairsLimit">Anzahl Zeilen</label>
+              <select id="pairsLimit">
                 <option value="25">25</option>
                 <option value="50" selected>50</option>
                 <option value="100">100</option>
@@ -324,7 +339,54 @@
           <h2>Exakte Orbit-Gruppen</h2>
           <div class="group-list" id="groupList"></div>
           <p class="hint" id="groupHint"></p>
+
+          <h2 style="margin-top: 16px">Plausibilitaets-Summary</h2>
+          <div class="mini-grid" id="validationMini"></div>
+          <p class="hint" id="validationHint"></p>
         </aside>
+      </section>
+
+      <section class="panel" style="margin-top: 16px">
+        <h2>Plausibilitaets-Issues</h2>
+        <div class="controls-issues">
+          <div>
+            <label for="searchIssues">Suche (ID, Regel, Text)</label>
+            <input id="searchIssues" type="text" placeholder="z. B. q_inconsistent, 19, inclination" />
+          </div>
+          <div>
+            <label for="severityFilter">Severity</label>
+            <select id="severityFilter">
+              <option value="ALL" selected>Alle</option>
+              <option value="ERROR">ERROR</option>
+              <option value="WARN">WARN</option>
+            </select>
+          </div>
+          <div>
+            <label for="issuesLimit">Anzahl Zeilen</label>
+            <select id="issuesLimit">
+              <option value="25" selected>25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="max-height: 460px">
+          <table>
+            <thead>
+              <tr>
+                <th>Comet ID</th>
+                <th>Severity</th>
+                <th>Rule</th>
+                <th>Message</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody id="issuesBody"></tbody>
+          </table>
+        </div>
+        <p class="hint" id="issuesHint"></p>
       </section>
 
       <p class="status" id="status">Lade Ergebnisdateien ...</p>
@@ -355,12 +417,12 @@
           } else if (char === ',') {
             row.push(value);
             value = "";
-          } else if (char === '\n') {
+          } else if (char === "\n") {
             row.push(value);
             rows.push(row);
             row = [];
             value = "";
-          } else if (char !== '\r') {
+          } else if (char !== "\r") {
             value += char;
           }
         }
@@ -372,19 +434,17 @@
 
         if (rows.length === 0) return [];
         const header = rows[0];
-        return rows.slice(1).filter((r) => r.length > 1).map((r) => {
-          const obj = {};
-          for (let i = 0; i < header.length; i += 1) {
-            obj[header[i]] = r[i] ?? "";
-          }
-          return obj;
-        });
-      }
 
-      function scoreClass(score) {
-        if (score <= 0.45) return "score-pill score-strong";
-        if (score <= 0.8) return "score-pill score-medium";
-        return "score-pill score-soft";
+        return rows
+          .slice(1)
+          .filter((r) => r.length > 1)
+          .map((r) => {
+            const obj = {};
+            for (let i = 0; i < header.length; i += 1) {
+              obj[header[i]] = r[i] ?? "";
+            }
+            return obj;
+          });
       }
 
       function toNumber(val, fallback = 0) {
@@ -392,26 +452,43 @@
         return Number.isFinite(n) ? n : fallback;
       }
 
-      function buildStats(pairs, groups) {
+      function scoreClass(score) {
+        if (score <= 0.45) return "pill score-strong";
+        if (score <= 0.8) return "pill score-medium";
+        return "pill score-soft";
+      }
+
+      function severityClass(sev) {
+        return sev === "ERROR" ? "pill sev-error" : "pill sev-warn";
+      }
+
+      function mapSummary(summaryRows) {
+        const map = {};
+        for (const row of summaryRows) {
+          map[row.metric] = row.value;
+        }
+        return map;
+      }
+
+      function buildStats(pairs, groups, summary) {
         const maxGroup = groups.reduce((max, item) => Math.max(max, toNumber(item.group_size, 0)), 0);
         const bestScore = pairs.length > 0 ? toNumber(pairs[0].score, 0) : 0;
-        const statItems = [
+
+        const items = [
           { label: "Aehnliche Paare", value: pairs.length.toLocaleString("de-DE") },
           { label: "Exakte Gruppen", value: new Set(groups.map((g) => g.group_id)).size.toLocaleString("de-DE") },
           { label: "Groesste Gruppe", value: maxGroup.toLocaleString("de-DE") },
           { label: "Bester Score", value: bestScore.toFixed(3) },
+          { label: "Validation ERROR", value: toNumber(summary.error_count, 0).toLocaleString("de-DE") },
+          { label: "Validation WARN", value: toNumber(summary.warn_count, 0).toLocaleString("de-DE") },
         ];
 
-        const statsNode = document.getElementById("stats");
-        statsNode.innerHTML = statItems
-          .map(
-            (item) =>
-              `<article class="card"><div class="label">${item.label}</div><div class="value">${item.value}</div></article>`,
-          )
+        document.getElementById("stats").innerHTML = items
+          .map((item) => `<article class="card"><div class="label">${item.label}</div><div class="value">${item.value}</div></article>`)
           .join("");
       }
 
-      function renderGroups(groupRows, maxGroups = 40) {
+      function renderGroups(groupRows, maxGroups = 32) {
         const groupMap = new Map();
         for (const row of groupRows) {
           if (!groupMap.has(row.group_id)) {
@@ -428,13 +505,10 @@
           }))
           .sort((a, b) => b.size - a.size);
 
-        const container = document.getElementById("groupList");
-        container.innerHTML = groups
+        document.getElementById("groupList").innerHTML = groups
           .slice(0, maxGroups)
           .map((group) => {
-            const memberText = group.members
-              .map((m) => `${m.comet_id}: ${m.name}`)
-              .join(" · ");
+            const memberText = group.members.map((m) => `${m.comet_id}: ${m.name}`).join(" · ");
             return `<div class="group-item"><div class="group-title">Gruppe ${group.groupId} (${group.size})</div><div class="group-members">${memberText}</div></div>`;
           })
           .join("");
@@ -442,10 +516,30 @@
         document.getElementById("groupHint").textContent = `${groups.length} Gruppen geladen, Anzeige: ${Math.min(groups.length, maxGroups)}.`;
       }
 
+      function renderValidationMini(summary) {
+        const fields = [
+          ["checked_rows", "Gepruefte Datensaetze"],
+          ["issue_count", "Issues gesamt"],
+          ["error_count", "ERROR"],
+          ["warn_count", "WARN"],
+          ["affected_comets", "Betroffene Kometen"],
+        ];
+
+        document.getElementById("validationMini").innerHTML = fields
+          .map(([key, label]) => {
+            const value = toNumber(summary[key], 0).toLocaleString("de-DE");
+            return `<div class="mini"><div class="label">${label}</div><div class="value" style="font-size:1.15rem">${value}</div></div>`;
+          })
+          .join("");
+
+        document.getElementById("validationHint").textContent =
+          "Quelle: data/orbit_plausibility_summary.csv";
+      }
+
       function renderPairs(allPairs) {
-        const q = document.getElementById("search").value.trim().toLowerCase();
+        const q = document.getElementById("searchPairs").value.trim().toLowerCase();
         const scoreMax = toNumber(document.getElementById("scoreMax").value, 1);
-        const limit = toNumber(document.getElementById("limit").value, 50);
+        const limit = toNumber(document.getElementById("pairsLimit").value, 50);
 
         const filtered = allPairs.filter((row) => {
           const score = toNumber(row.score, 999);
@@ -457,55 +551,96 @@
         });
 
         const shown = filtered.slice(0, limit);
-        const body = document.getElementById("pairsBody");
-
-        body.innerHTML = shown
+        document.getElementById("pairsBody").innerHTML = shown
           .map((row) => {
             const score = toNumber(row.score, 0);
-            return `
-              <tr>
-                <td>${row.comet_id_1}: ${row.name_1}</td>
-                <td>${row.comet_id_2}: ${row.name_2}</td>
-                <td><span class="${scoreClass(score)}">${score.toFixed(3)}</span></td>
-                <td>${toNumber(row.de).toFixed(3)}</td>
-                <td>${toNumber(row.dq).toFixed(3)}</td>
-                <td>${toNumber(row.di).toFixed(3)}</td>
-                <td>${toNumber(row.dom).toFixed(3)}</td>
-                <td>${toNumber(row.dw).toFixed(3)}</td>
-                <td>${toNumber(row.da_rel).toFixed(3)}</td>
-              </tr>
-            `;
+            return `<tr>
+              <td>${row.comet_id_1}: ${row.name_1}</td>
+              <td>${row.comet_id_2}: ${row.name_2}</td>
+              <td><span class="${scoreClass(score)}">${score.toFixed(3)}</span></td>
+              <td>${toNumber(row.de).toFixed(3)}</td>
+              <td>${toNumber(row.dq).toFixed(3)}</td>
+              <td>${toNumber(row.di).toFixed(3)}</td>
+              <td>${toNumber(row.dom).toFixed(3)}</td>
+              <td>${toNumber(row.dw).toFixed(3)}</td>
+              <td>${toNumber(row.da_rel).toFixed(3)}</td>
+            </tr>`;
           })
           .join("");
 
         document.getElementById("pairsHint").textContent = `${filtered.length} Treffer nach Filter, Anzeige: ${shown.length}.`;
       }
 
-      async function loadData() {
-        try {
-          const [pairsRes, groupsRes] = await Promise.all([
-            fetch("data/similar_orbits.csv", { cache: "no-store" }),
-            fetch("data/exact_orbit_groups.csv", { cache: "no-store" }),
-          ]);
+      function renderIssues(allIssues) {
+        const q = document.getElementById("searchIssues").value.trim().toLowerCase();
+        const severity = document.getElementById("severityFilter").value;
+        const limit = toNumber(document.getElementById("issuesLimit").value, 25);
 
-          if (!pairsRes.ok || !groupsRes.ok) {
-            throw new Error("CSV-Dateien konnten nicht geladen werden.");
+        const filtered = allIssues.filter((row) => {
+          if (severity !== "ALL" && row.severity !== severity) {
+            return false;
           }
 
-          const [pairsText, groupsText] = await Promise.all([pairsRes.text(), groupsRes.text()]);
+          if (!q) return true;
+          const hay = `${row.comet_id} ${row.rule} ${row.message} ${row.details}`.toLowerCase();
+          return hay.includes(q);
+        });
+
+        const shown = filtered.slice(0, limit);
+        document.getElementById("issuesBody").innerHTML = shown
+          .map((row) => `<tr>
+            <td>${row.comet_id}</td>
+            <td><span class="${severityClass(row.severity)}">${row.severity}</span></td>
+            <td>${row.rule}</td>
+            <td>${row.message}</td>
+            <td>${row.details}</td>
+          </tr>`)
+          .join("");
+
+        document.getElementById("issuesHint").textContent = `${filtered.length} Issues nach Filter, Anzeige: ${shown.length}.`;
+      }
+
+      async function loadData() {
+        try {
+          const [pairsRes, groupsRes, issuesRes, summaryRes] = await Promise.all([
+            fetch("data/similar_orbits.csv", { cache: "no-store" }),
+            fetch("data/exact_orbit_groups.csv", { cache: "no-store" }),
+            fetch("data/orbit_plausibility_issues.csv", { cache: "no-store" }),
+            fetch("data/orbit_plausibility_summary.csv", { cache: "no-store" }),
+          ]);
+
+          if (!pairsRes.ok || !groupsRes.ok || !issuesRes.ok || !summaryRes.ok) {
+            throw new Error("Mindestens eine CSV-Datei konnte nicht geladen werden.");
+          }
+
+          const [pairsText, groupsText, issuesText, summaryText] = await Promise.all([
+            pairsRes.text(),
+            groupsRes.text(),
+            issuesRes.text(),
+            summaryRes.text(),
+          ]);
+
           const pairs = parseCSV(pairsText).sort((a, b) => toNumber(a.score, 999) - toNumber(b.score, 999));
           const groups = parseCSV(groupsText);
+          const issues = parseCSV(issuesText);
+          const summary = mapSummary(parseCSV(summaryText));
 
-          buildStats(pairs, groups);
+          buildStats(pairs, groups, summary);
           renderGroups(groups);
+          renderValidationMini(summary);
           renderPairs(pairs);
+          renderIssues(issues);
 
-          document.getElementById("search").addEventListener("input", () => renderPairs(pairs));
+          document.getElementById("searchPairs").addEventListener("input", () => renderPairs(pairs));
           document.getElementById("scoreMax").addEventListener("input", () => renderPairs(pairs));
-          document.getElementById("limit").addEventListener("change", () => renderPairs(pairs));
+          document.getElementById("pairsLimit").addEventListener("change", () => renderPairs(pairs));
+
+          document.getElementById("searchIssues").addEventListener("input", () => renderIssues(issues));
+          document.getElementById("severityFilter").addEventListener("change", () => renderIssues(issues));
+          document.getElementById("issuesLimit").addEventListener("change", () => renderIssues(issues));
 
           document.getElementById("status").textContent =
-            "Ergebnis geladen. Quelle: data/similar_orbits.csv und data/exact_orbit_groups.csv";
+            "Daten geladen: similar_orbits, exact_orbit_groups, orbit_plausibility_issues, orbit_plausibility_summary.";
         } catch (error) {
           document.getElementById("status").textContent = `Fehler beim Laden: ${error.message}`;
         }
